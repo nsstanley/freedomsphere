@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.0">
+  <zoom_level>4</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>0</y>
+      <w>152</w>
+      <h>504</h>
+    </coordinates>
+    <panel_attributes>*Soldier*
+--
+-id: int = 0
+-lName: String
+-fName: String
+-mName: String
+-sex: String
+-dob: GregorianCalendar
+-squad: int
+-credentials: ArrayList&lt;Credential&gt;
+-driversLicenses: ArrayList&lt;DriversLicense&gt;
+-addresses: ArrayList&lt;Address&gt;
+-phones: ArrayList&lt;Phone&gt;
+-contracts: ArrayList&lt;Contract&gt;
+-trainings: ArrayList&lt;Training&gt;
+-weapons: ArrayList&lt;Weapon&gt;
+-apfts: ArrayList&lt;Apft&gt;
+-htwts: ArrayList&lt;Htwt&gt;
+-ranks: ArrayList&lt;Rank&gt;
+-moses: ArrayList&lt;Mos&gt;
+-statuses: ArrayList&lt;Status&gt;
+-counselings: ArrayList&lt;Counseling&gt;
+-issues: ArrayList&lt;Issue&gt;
+--
++getId(): int
++setLNAme(ln: String): void
++getLNAme(): String
++setFName(fn: String): void
++getFName(): String
++setMName(mn: String): void
++getMName(): String
++setSex(sex: String): void
++getSex(): String
++setDob(date: GregorianCalendar): void
++getDob(): GregorianCalendar
++setSquad(sqd: int): void
++getSquad(): int
++addCredential(cred: Credential): void
++rmvCredential(cred: Credential): void
++getCredentials(): ArrayList&lt;Credential&gt;
++addDriversLicense(dlic: DriversLicense): void
++rmvDriversLicense(dlic: DriversLicense): void
++getDriversLicenses(): ArrayList&lt;DriversLicense&gt;
++addAddress(addr: Address): void
++rmvAddress(addr: Address): void
++getAddresses(): ArrayList&lt;Address&gt;
++addPhone(phone: Phone): void
++rmvPhone(phone: Phone): void
++getPhones(): ArrayList&lt;Phone&gt;
++addContract(contract: Contract): void
++rmvContract(contract: Contract): void
++getContracts(): ArrayList&lt;Contract&gt;
++addTraining(training: Training): void
++rmvTraining(training: Training): void
++getTrainings(): ArrayList&lt;Training&gt;
++addWeapon(weapon: Weapon): void
++rmvWeapon(weapon: Weapon): void
++getWeapons(): ArrayList&lt;Weapon&gt;
++addApft(apft: Apft): void
++rmvApft(apft: Apft): void
++getApfts(): ArrayList&lt;Apft&gt;
++addHtwt(htwt: Htwt): void
++rmvHtwt(htwt: Htwt): void
++getHtwts(): ArrayList&lt;Htwt&gt;
++addRank(rank: Rank): void
++rmvRank(rank: Rank): void
++getRanks(): ArrayList&lt;Rank&gt;
++addMos(mos: Mos): void
++rmvMos(mos: Mos): void
++getMoses(): ArrayList&lt;Mos&gt;
++addStatus(stat: Status): void
++rmvStatus(stat: Status): void
++getStatuses(): ArrayList&lt;Status&gt;
++addCounseling(couns: Counseling): void
++rmvCounseling(couns: Counseling): void
++getCounselings(): ArrayList&lt;Counseling&gt;
++addIssue(issue: Issue): void
++rmvIssue(issue: Issue): void
++getIssues(): ArrayList&lt;Issue&gt;
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>528</y>
+      <w>152</w>
+      <h>92</h>
+    </coordinates>
+    <panel_attributes>*Supervisor*
+--
+-subordinates: ArrayList&lt;Soldier&gt;
+-startDate: GregorianCalendar
+-endDate: GregorianCalendar
+--
++addSubordinate(sub: Soldier): void
++rmvSubordinate(sub: Soldier): void
++getSubordinates(): ArrayList&lt;Soldier&gt;
++setStartDate(date: GregorianCalendar): void
++getStartDate(): GregorianCalendar
++setEndDate(date: GregorianCalendar): void
++getEndDate(): GregorianCalendar
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>288</x>
+      <y>500</y>
+      <w>12</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>388</y>
+      <w>152</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>*Rank*
+--
+-id: int = 0
+-rank: String
+-date: GregorianCalendar
+--
++getId(): int
++setRank(rank: String): void
++getRank(): String
++setDate(date: GregorianCalendar): void
++getDate(): GregorianCalendar</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>708</x>
+      <y>144</y>
+      <w>152</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>*Htwt*
+--
+-height: int
+-weight: int
+--
++setHeight(ht: int): void
++getHeight(): int
++setWeight(wt: int): void
++getWeight(): int
++calculatePass(): boolean
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>552</x>
+      <y>144</y>
+      <w>152</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>*Weapon*
+--
+-weaponType: String
+-rangeType: String
+-rawScore: int
+--
++setWeaponType(wpn: String): void
++getWeaponType(): String
++setRangeType(range: String): void
++getRangeType(): String
++calculateExpertise(): String
++calculatePass(): boolean
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>596</x>
+      <y>484</y>
+      <w>152</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>*Certification*
+--
+-id: int = 0
+-endDate: GregorianCalendar
+--
++getId(): int
++setEndDate(date: GregorianCalendar): void
++getEndDate(): GregorianCalendar
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>760</x>
+      <y>240</y>
+      <w>152</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>*Training*
+--
+-id: int = 0
+-name: String
+-type: String
+-startDate: GregorianCalendar
+-endDate: GregorianCalendar
+-success: boolean
+--
++getId(): int
++setName(name: String): void
++getName(): String
++setType(type: String): void
++getType(): String
++setStartDate(date: GregorianCalendar): void
++getStartDate(): GregorianCalendar
++setEndDate(date: GregorianCalendar): void
++getEndDate(): GregorianCalendar
++setSuccess(success: boolean): void
++getSuccess(): boolean
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>396</x>
+      <y>144</y>
+      <w>152</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>*Apft*
+--
+-puRaw: int
+-suRaw: int
+-runRawMinutes: int
+-runRawSeconds: int
+--
++setPuRaw(rawTotal: int)
++getPuRaw(): int
++setSuRaw(rawTotal: int)
++getSuRaw(): int
++setRunRawMinutes(rawMinutes: int)
++getRunRawMinutes(): int
++setRunRawSeconds(rawSeconds: int)
++getRunRawSeconds(): int
++calculatePass(): boolean
++calculateOverallScore(): int
+-calculatePuScore(): int
+-calculateSuScore(): int
+-calculateRunScore(): int
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>552</x>
+      <y>36</y>
+      <w>152</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+*Test*
+--
+-id: int = 0
+-date: GregorianCalendar
+--
++getId(): int
++setDate(date: GregorianCalendar): void
++getDate(): GregorianCalendar
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>596</x>
+      <y>388</y>
+      <w>152</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>*Phone*
+--
+-id: int = 0
+-type: String
+-number: String
+--
++getId(): int
++setType(type: String): void
++getType(): String
++setNumber(type: String): void
++getNumber(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>592</x>
+      <y>328</y>
+      <w>68</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>Testable
+--
+calculatePass(): boolean
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>624</x>
+      <y>88</y>
+      <w>168</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;400.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>624</x>
+      <y>88</y>
+      <w>12</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>468</x>
+      <y>88</y>
+      <w>168</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>400.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>624</x>
+      <y>220</y>
+      <w>12</w>
+      <h>116</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;270.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>624</x>
+      <y>208</y>
+      <w>172</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;300.0;410.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>468</x>
+      <y>272</y>
+      <w>168</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>400.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>480</x>
+      <y>576</y>
+      <w>152</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>*DriversLicense*
+--
+-type: String
+-endorsements: String
+--
++setType(type: String): void
++getType(): String
++setEndorsements(edm: String): void
++getEndorsements(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>772</x>
+      <y>388</y>
+      <w>152</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>*Contract*
+--
+-id: int = 0
+-StartDate: GregorianCalendar
+-EndDate: GregorianCalendar
+--
++getId(): int
++setStartDate(date: GregorianCalendar): void
++getStartDate(): GregorianCalendar
++setEndDate(date: GregorianCalendar): void
++getEndDate(): GregorianCalendar</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>924</x>
+      <y>204</y>
+      <w>152</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>*Mos*
+--
+-id: int = 0
+-name: String
+-designator: String
+-date: GregorianCalendar
+--
++getId(): int
++setName(name: String): void
++getName(): String
++setDesignator(des: String): void
++getDesignator(): String
++setDate(date: GregorianCalendar): void
++getDate(): GregorianCalendar</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>880</x>
+      <y>4</y>
+      <w>152</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>*Address*
+--
+-id: int = 0
+-type: String
+-street: String
+-street2: String
+-city: String
+-state: String
+-zip: String
+--
++getId(): int
++setType(type: String): void
++getType(): String
++setStreet(street: String): void
++getStreet(): String
++setStreet2(street2: String): void
++getStreet2(): String
++setCity(city: String): void
++getCity(): String
++setState(state: String): void
++getState(): String
++setZip(zip: String): void
++getZip(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>692</x>
+      <y>576</y>
+      <w>152</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Credential*
+--
+name: String
+--
+setName(name: String): void
+getName(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>664</x>
+      <y>536</y>
+      <w>112</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;260.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>552</x>
+      <y>536</y>
+      <w>124</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>290.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>940</x>
+      <y>504</y>
+      <w>116</w>
+      <h>92</h>
+    </coordinates>
+    <panel_attributes>*Issue*
+--
+-id: int = 0
+-date: GregorianCalendar
+-description: String
+-helper: Soldier
+--
++getId(): int
++setDate(date: GregorianCalendar): void
++getDate(): GregorianCalendar
++setDescription(desc: String): void
++getDescription(): String
++setHelper(helper: Soldier): void
++getHelper(): Soldier</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>940</x>
+      <y>308</y>
+      <w>116</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>*Status*
+--
+-id: int = 0
+-date: GregorianCalendar
+-status: String
+--
++getId(): int
++setDate(date: GregorianCalendar): void
++getDate(): GregorianCalendar
++setStatus(stat: String): void
++getStatus(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>936</x>
+      <y>388</y>
+      <w>116</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>*Counseling*
+--
+-id: int = 0
+-date: GregorianCalendar
+-type: String
+-subject: String
+-counselor: Soldier
+--
++getId(): int
++setDate(date: GregorianCalendar): void
++getDate(): GregorianCalendar
++setType(type: String): void
++getType(): String
++setSubject(subj: String): void
++getSubject(): GregorianCalendar
++setCounselor(counselor: Soldier): void
++getCounselor(): Soldier</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
