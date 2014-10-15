@@ -1,6 +1,6 @@
-package com.freedomsphere.ap;
+package com.freedomsphere.standards;
 
-public abstract class MyArray {
+public abstract class BodyFatStandards {
 	
 	/*
 	 
@@ -45,6 +45,20 @@ public abstract class MyArray {
 	public static int getMaximumWeight(String sex, int age, int height){
 		int[] weightArray = chooseArray(sex, age);
 		int heightIndex = getHeightIndex(height);
+		if (heightIndex > 23) {
+			//get top weight for category
+			int topWeight = weightArray[22];
+			int factor = heightIndex - 80;
+			
+			//if male add 6 pounds for every inch over 80
+			if (sex == "Male")
+			{
+				return (factor * 6) + topWeight;
+			}else{
+			//if female add 5 pounds for every inch over 80
+				return (factor * 5) + topWeight;
+			}
+		}
 		int maxWeight = weightArray[heightIndex];
 		return maxWeight;
 	}
